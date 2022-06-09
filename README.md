@@ -1,5 +1,5 @@
 # README
-<p align="center"> Esse projeto é um sistema de login completo </p>
+<p align="center"> Esse projeto é um E-commerce </p>
 
 
 
