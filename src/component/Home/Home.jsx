@@ -9,7 +9,7 @@ const Home = () => {
           <div className="container">
             <h5 class="card-title display-3 fw-bolder mb-0 ">
             NOVA COLEÇÃO  </h5>
-            <p class="card-text lead fs-0" > CHECK OUT ALL THE TRENDS </p>
+            <p class="card-text lead fs-0" > CONFIRA NOSSOS NOVOS PRODUTOS </p>
             </div>
         </div>
       </div>
