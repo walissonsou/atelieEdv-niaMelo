@@ -25,16 +25,16 @@ export default function NavBar() {
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               
               <li className="nav-item">
-                <NavLink className="nav-link disabled" to="/products">PRODUTOS
+                <NavLink className="nav-link active" aria-current="page"  to="/products">PRODUTOS
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link disabled" to="/contact">SOBRE
+                <NavLink className="nav-link active" aria-current="page" to="/about">SOBRE
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link disabled" to="/products">CONTATO
+                <NavLink className="nav-link active" aria-current="page"  to="/contact">CONTATO
                 </NavLink>
               </li>
             </ul>

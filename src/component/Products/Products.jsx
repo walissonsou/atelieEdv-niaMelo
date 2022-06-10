@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Skeleton from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton';
+import {NavLink} from 'react-router-dom';
 export default function Products() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
@@ -69,7 +70,7 @@ export default function Products() {
                 <div class="card-body">
                   <h5 class="card-title">{product.title}</h5>
                   <p class="card-text">{product.title}</p>
-                  <a href="#" class="btn btn-primary"> Comprar </a>
+                  <NavLink to={`products/${product.id}`} class="btn btn-primary"> Comprar </NavLink>
               </div>
             </div>
             </div>
@@ -86,7 +87,7 @@ export default function Products() {
           <div className="col-12 mb-5">
             <h1 className="display-6 fw-bolder text-center">
               
-              Ultimos produtos
+              Últimos produtos
             </h1>
             <hr />
           </div>
