@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import Skeleton from 'react-loading-skeleton'
 export default function Products() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
@@ -10,7 +10,7 @@ export default function Products() {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("Criar api");
+      const response = await fetch("https://fakestoreapi.com/products");
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
@@ -24,27 +24,52 @@ export default function Products() {
     getProducts();
   }, []);
   const Loading = () => {
-    return <>Carregando...</>;
+    return (
+      <> 
+      <div className="col-md-3">      
+      <Skeleton height={350} />
+      </div>
+      <div className="col-md-3">      
+      <Skeleton height={350} />
+      </div>
+      <div className="col-md-3">      
+      <Skeleton height={350} />
+      </div>
+      <div className="col-md-3">      
+      <Skeleton height={350} />
+      </div>
+      </>
+    )
   };
+  const filterProduct = (item) => {
+    const updatedList = data.filter((e) => e.category === item);
+    setFilter(updatedList)
+  }
   const ShowProducts = () => {
     return (
       <>
         <div className="buttons d-flex justify-content-center mb-5 pb-5">
-          <button className="btn btn-outline-dark me-2"> Bebê </button>
-          <button className="btn btn-outline-dark me-2"> Escolar </button>
-          <button className="btn btn-outline-dark me-2"> Sala </button>
-          <button className="btn btn-outline-dark me-2"> Cozinha </button>
+          <button className="btn btn-outline-dark me-2" onClick={() => setFilter(data)}> Todos </button>
+
+          <button className="btn btn-outline-dark me-2"
+          onClick={() => filterProduct("women's clothing")}> Bebê </button>
+
+          <button className="btn btn-outline-dark me-2"
+          onClick={() => filterProduct("jewelery")}> Sala </button>
+
+          <button className="btn btn-outline-dark me-2"
+          onClick={() => filterProduct("electronics")}> Escolar </button>
         </div>
         {filter.map((product) => {
           return (
             <> 
             <div className="col-md-3">
-              <div class="card">
+              <div class="card"> 
                <img class="card-img-top" src={product.image} alt={product.title} />
                 <div class="card-body">
                   <h5 class="card-title">{product.title}</h5>
                   <p class="card-text">{product.title}</p>
-                  <a href="#" class="btn btn-primary">Go somewhere </a>
+                  <a href="#" class="btn btn-primary"> Comprar </a>
               </div>
             </div>
             </div>
