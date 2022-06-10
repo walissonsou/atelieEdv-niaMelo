@@ -1,8 +1,9 @@
 
 import './App.css';
-import Home from '../src/component/Home/Home'
+import Home from '../src/component/Home/Home';
+import Products from '../src/component/Products/Products'
 import NavBar from '../src/component/NavBar/NavBar'
-import {Switch, Route} 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 function App() {
   return (
     <div className="App">

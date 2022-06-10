@@ -1,14 +1,15 @@
 import React from "react";
 import logo from './logo.png'
 import './styles.css';
+import {NavLink} from 'react-router-dom';
 export default function NavBar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-white py-3 shadow-sm">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <NavLink className="navbar-brand" to="/">
           <img className="logo" src={logo}/>
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,21 +25,24 @@ export default function NavBar() {
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               
               <li className="nav-item">
-                <a className="nav-link disabled">PRODUTOS</a>
+                <NavLink className="nav-link disabled" to="/products">PRODUTOS
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled">SOBRE</a>
+                <NavLink className="nav-link disabled" to="/contact">SOBRE
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link disabled">CONTATO</a>
+                <NavLink className="nav-link disabled" to="/products">CONTATO
+                </NavLink>
               </li>
             </ul>
             <div classNameName="buttons">
               
-            <a href="" className="btn btn-outline-dark " > <i className="fa fa-sign-in me-1"></i>Login </a>
-            <a href="" className="btn btn-outline-dark ms-2"> <i className="fa fa-sign-in me-1"></i>Register </a>
-            <a href="" className="btn btn-outline-dark ms-2"> <i className="fa fa-shopping-cart me-1"></i>Carrinho </a>
+            <NavLink to="/login" className="btn btn-outline-dark " > <i className="fa fa-sign-in me-1"/> Login </NavLink>
+            <NavLink to="/register" className="btn btn-outline-dark ms-2"> <i className="fa fa-sign-in me-1"/> Register </NavLink>
+            <NavLink to="/cart" className="btn btn-outline-dark ms-2"> <i className="fa fa-shopping-cart me-1"/> Carrinho </NavLink>
             </div>
           </div>
         </div>
