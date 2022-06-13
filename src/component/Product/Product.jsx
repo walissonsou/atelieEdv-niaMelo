@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addCart, delCart} from '../redux/Action/index';
 import { useParams } from 'react-router';
 import {NavLink} from 'react-router-dom';
+
 export default function Product() {
   const { id } = useParams();
     const [product, setProduct] = useState([]);
@@ -12,11 +13,11 @@ export default function Product() {
     const addProduct = (product) => {
       dispatch(addCart(product));
     }
-
+    
     useEffect(() => {
       const getProduct = async () => {
         setLoading(true)
-        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const response = await fetch(`https://atelieedvania.herokuapp.com/products{product}${id}`);
         setProduct(await response.json());
         setLoading(false)      
       }

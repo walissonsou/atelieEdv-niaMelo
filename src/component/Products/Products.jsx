@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 import Skeleton from 'react-loading-skeleton';
+
 import {NavLink} from 'react-router-dom';
+
 export default function Products() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
@@ -11,12 +14,14 @@ export default function Products() {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("https://fakestoreapi.com/products");
+      
+      const response = await fetch("https://atelieedvania.herokuapp.com/products");
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
         setLoading(false);
         console.log(filter);
+        console.log(response.json())
       }
       return () => {
         componentMounted = false;
@@ -53,13 +58,13 @@ export default function Products() {
           <button className="btn btn-outline-dark me-2" onClick={() => setFilter(data)}> Todos </button>
 
           <button className="btn btn-outline-dark me-2"
-          onClick={() => filterProduct("women's clothing")}> Bebê </button>
+          onClick={() => filterProduct("bebe")}> Bebê </button>
 
           <button className="btn btn-outline-dark me-2"
-          onClick={() => filterProduct("jewelery")}> Sala </button>
+          onClick={() => filterProduct("sala")}> Sala </button>
 
           <button className="btn btn-outline-dark me-2"
-          onClick={() => filterProduct("electronics")}> Escolar </button>
+          onClick={() => filterProduct("escolar")}> Escolar </button>
         </div>
         {filter.map((product) => {
           return (
