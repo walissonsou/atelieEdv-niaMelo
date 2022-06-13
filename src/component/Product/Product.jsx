@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addCart, delCart} from '../redux/Action/index';
 import { useParams } from 'react-router';
 import {NavLink} from 'react-router-dom';
 export default function Product() {
   const { id } = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
+
+    const dispatch = useDispatch();
+    const addProduct = (product) => {
+      dispatch(addCart(product));
+    }
 
     useEffect(() => {
       const getProduct = async () => {
@@ -44,7 +51,7 @@ export default function Product() {
 
             <p className="lead"> {product.description}</p>
             
-            <button className="btn btn-outline-dark me-3 py-2">
+            <button className="btn btn-outline-dark me-3 py-2" onClick={() => addProduct(product)}>
               Adicionar ao carrinho
             </button>
             <NavLink className="btn btn-dark ms-2 px-3 py-2" to="/cart">

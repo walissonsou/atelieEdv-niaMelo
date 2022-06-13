@@ -6,8 +6,9 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 import { Provider } from 'react-redux';
-import store from '../src/component/redux/Reducers/store;'
 import {BrowserRouter} from 'react-router-dom';
+import store from './component/redux/store';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
