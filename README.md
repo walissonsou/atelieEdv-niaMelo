@@ -7,16 +7,19 @@
 <br>
 
 <h4 align="center">
- 🚧  E-commerce Ateliê Edivânia Melo 🚧...
+ 🚧 Em breve um E-commerce Ateliê Edivânia Melo em construção 🚧...
   </h4>
 
 ### Features
 - [X] Criar Título
 - [X] Criar Descrição
 - [X] GIF's
+- [X] API própria (hospedada no heroku) https://atelieedvania.herokuapp.com/products
 
 ### Prévia
-<img alt="previa" src="./atelie.png"> 
+<img alt="previa" src="./atelie.png"/> 
+<img alt="products" src="/lasproducts2.png" />
+<img alt="products" src="/lasproducts3.png" />
 
 <h1 align="center">
   <img alt="Readme" title="Readme" src="https://rafaelherculano.com.br/assets/images/busy.gif" />

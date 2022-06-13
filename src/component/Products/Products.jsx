@@ -21,7 +21,7 @@ export default function Products() {
         setFilter(await response.json());
         setLoading(false);
         console.log(filter);
-        console.log(response.json())
+        
       }
       return () => {
         componentMounted = false;
