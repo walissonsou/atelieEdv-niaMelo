@@ -17,9 +17,12 @@
 - [X] API própria (hospedada no heroku) https://atelieedvania.herokuapp.com/products
 
 ### Prévia
-<img alt="previa" src="./atelie.png"/> 
-<img alt="products" src="/lasproducts2.png" />
-<img alt="products" src="/lasproducts3.png" />
+
+<img alt="previa" src="./atelie.png"> 
+
+<img alt="products" src="/lastproducts2.png">
+
+<img alt="products" src="/lastproducts3.png">
 
 <h1 align="center">
   <img alt="Readme" title="Readme" src="https://rafaelherculano.com.br/assets/images/busy.gif" />
