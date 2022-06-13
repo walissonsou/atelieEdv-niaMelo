@@ -17,7 +17,7 @@ export default function Product() {
     useEffect(() => {
       const getProduct = async () => {
         setLoading(true)
-        const response = await fetch(`https://atelieedvania.herokuapp.com/products{product}${id}`);
+        const response = await fetch(`https://atelieedvania.herokuapp.com/products/{product}${id}`);
         setProduct(await response.json());
         setLoading(false)      
       }
